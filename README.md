@@ -124,8 +124,40 @@ The service is implemented as a RESTful API, with each operation mapped to a spe
    npm run start
 
 2. **Containerize the Service:**
+1. Build Docker image:
+    ```bash
+    docker build -t staff-service .
+    ```
 
+2. Run the Docker container:
+    ```bash
+    docker run -p 3000:3000 fattehali/staff-service:Latest
+    ```
 
+3. Push the Docker image to Docker Hub:
+    ```bash
+    docker tag fattehali/staff-service:Latest fattehali/staff-service:Latest
+    docker push  fattehali/staff-service:Latest
+    ```
+### Deploying to Azure Kubernetes Service (AKS):
+1. Create AKS cluster using Azure Portal or CLI.
+2. Use the `staff-service.yaml` to deploy the service to the AKS cluster:
+    ```bash
+    kubectl apply -f staff-service.yaml
+    ```
+
+### CI/CD Setup:
+1. Add a `.github/workflows/ci_cd.yaml` file for the pipeline.
+2. The pipeline will:
+    - Build the service.
+    - Run unit tests.
+    - Deploy the service to AKS upon successful tests.
+
+## Completed Tasks
+- Developed the **staff-service** microservice with CRUD operations.
+- Containerized the service using **Docker**.
+- Deployed the service to **Azure Kubernetes Service (AKS)**.
+- Configured and tested the **CI/CD pipeline** using **GitHub Actions**.
 
 
 
