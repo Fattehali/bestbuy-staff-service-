@@ -143,7 +143,7 @@ The service is implemented as a RESTful API, with each operation mapped to a spe
 1. Create AKS cluster using Azure Portal or CLI.
 2. Use the `staff-service.yaml` to deploy the service to the AKS cluster:
     ```bash
-    kubectl apply -f staff-service.yaml
+    kubectl apply -f deployment.yaml
     ```
 
 ### CI/CD Setup:
