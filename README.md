@@ -131,12 +131,12 @@ The service is implemented as a RESTful API, with each operation mapped to a spe
 
 2. Run the Docker container:
     ```bash
-    docker run -p 3000:3000 fattehali/staff-service:Latest
+    docker run -p 3000:3000 fattehali/staff-service:latest
     ```
 
 3. Push the Docker image to Docker Hub:
     ```bash
-    docker tag fattehali/staff-service:Latest fattehali/staff-service:Latest
+    docker tag fattehali/staff-service:latest fattehali/staff-service:latest
     docker push  fattehali/staff-service:Latest
     ```
 ### Deploying to Azure Kubernetes Service (AKS):
